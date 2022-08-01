@@ -32,11 +32,13 @@ $ npm install
 # development
 $ docker-compose up
 
+wss port:3000
+api port :3000
 
 ```
 
 ## Running  site-image-process/
-
+frontend port : localhost:4200
 ```bash
 $ npx nx serve site-process 
 
