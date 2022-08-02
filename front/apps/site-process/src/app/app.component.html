@@ -1,0 +1,36 @@
+<div class="l-main">
+  <div class="l-contentWrap padding109"><img class="logo mb20" alt="Logo"
+      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" height="92" width="272">
+
+    <div class=" ">
+      <input type="url" placeholder="" [(ngModel)]="site" style="width:20rem;  margin-left:2rem;" class="inputWrap ">
+    </div>
+    <p class="mb20 button" (click)="processImage()" style="margin-top:1rem ; margin-left:2rem;">Buscar imagens</p>
+  </div>
+</div>
+<div class="">
+  <div class="wrapper">
+
+    <div class="content">
+
+      <div class="product-grid product-grid--flexbox">
+        <div class="product-grid__wrapper">
+
+
+
+          <div class="product-grid__product-wrapper" *ngFor="let item of list">
+            <div class="product-grid__product">
+              <div class="product-grid__img-wrapper">
+                <img src="{{item.site}}{{item.default_url}}" alt="Img" class="product-grid__img" />
+              </div>
+              <span style="margin-left:1rem ;" class="product-grid__title">Data processamento :{{item.process_date |
+                date: 'dd/MM/yyyy HH:mm'}} </span>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>

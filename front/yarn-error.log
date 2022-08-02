@@ -1,0 +1,103 @@
+Arguments: 
+  /usr/local/bin/node /Users/pedrojoaquimdacosta/.npm-global/bin/yarn add @ngx-socket-io
+
+PATH: 
+  /opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/pedrojoaquimdacosta/.npm-global/bin:/tools/bin:/platform-tools:/emulator:/Users/pedrojoaquimdacosta/.npm-global/bin:/tools/bin:/platform-tools:/emulator
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.16.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@ngx-socket-io: Request "https://registry.yarnpkg.com/@ngx-socket-io" returned a 405
+      at Request.params.callback [as _callback] (/Users/pedrojoaquimdacosta/.npm-global/lib/node_modules/yarn/lib/cli.js:66147:18)
+      at Request.self.callback (/Users/pedrojoaquimdacosta/.npm-global/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/Users/pedrojoaquimdacosta/.npm-global/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/Users/pedrojoaquimdacosta/.npm-global/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "site-image-process",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+      "ng": "nx",
+      "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
+      "start": "nx serve",
+      "build": "nx build",
+      "test": "nx test"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "~14.1.0",
+      "@angular/common": "~14.1.0",
+      "@angular/compiler": "~14.1.0",
+      "@angular/core": "~14.1.0",
+      "@angular/forms": "~14.1.0",
+      "@angular/platform-browser": "~14.1.0",
+      "@angular/platform-browser-dynamic": "~14.1.0",
+      "@angular/router": "~14.1.0",
+      "@nestjs/common": "^8.4.7",
+      "@nestjs/core": "^8.0.0",
+      "@nestjs/platform-express": "^8.0.0",
+      "@nestjs/platform-socket.io": "^8.4.7",
+      "@nestjs/websockets": "^8.4.7",
+      "@nrwl/angular": "14.5.1",
+      "reflect-metadata": "^0.1.13",
+      "rxjs": "~7.4.0",
+      "tslib": "^2.3.0",
+      "zone.js": "~0.11.4"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~14.1.0",
+      "@angular-eslint/eslint-plugin": "~14.0.0",
+      "@angular-eslint/eslint-plugin-template": "~14.0.0",
+      "@angular-eslint/template-parser": "~14.0.0",
+      "@angular/cli": "~14.1.0",
+      "@angular/compiler-cli": "~14.1.0",
+      "@angular/language-service": "~14.1.0",
+      "@nestjs/schematics": "^8.0.0",
+      "@nestjs/testing": "^8.0.0",
+      "@nrwl/cli": "14.5.1",
+      "@nrwl/cypress": "14.5.1",
+      "@nrwl/eslint-plugin-nx": "14.5.1",
+      "@nrwl/jest": "14.5.1",
+      "@nrwl/linter": "14.5.1",
+      "@nrwl/nest": "14.5.1",
+      "@nrwl/node": "14.5.1",
+      "@nrwl/nx-cloud": "latest",
+      "@nrwl/workspace": "14.5.1",
+      "@types/jest": "27.4.1",
+      "@types/node": "16.11.7",
+      "@typescript-eslint/eslint-plugin": "^5.29.0",
+      "@typescript-eslint/parser": "^5.29.0",
+      "cypress": "^10.2.0",
+      "eslint": "~8.15.0",
+      "eslint-config-prettier": "8.1.0",
+      "eslint-plugin-cypress": "^2.10.3",
+      "jest": "27.5.1",
+      "jest-preset-angular": "~11.1.2",
+      "nx": "14.5.1",
+      "prettier": "^2.6.2",
+      "ts-jest": "27.1.4",
+      "ts-node": "~10.8.0",
+      "typescript": "~4.7.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
