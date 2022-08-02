@@ -19,8 +19,6 @@ existem  4 aplicacoes
 $ npm install
 ```
 
-site usado para teste : https://www.bridgeport.edu
-
 ## Installation  cd backend/
 
 ```bash
@@ -44,7 +42,7 @@ frontend port : localhost:4200
 ```bash
 $ npx nx serve site-process 
 
-
+url usado para teste buscando as imagens: https://www.bridgeport.edu
 ```
 
 ## Mongo acess replica/
