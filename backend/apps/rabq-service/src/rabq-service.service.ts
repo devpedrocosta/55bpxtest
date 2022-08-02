@@ -15,19 +15,15 @@ export class RabqServiceService {
   async createProcessJob(data: any) {
 
     await this.createOrder(data);
-   // this.wsservice.send(JSON.stringify(data));
+    this.wsservice.send(JSON.stringify(data));
   }
 
   download(uri, filename, callback) {
-    const upload_dir = __dirname + '/../../uploads';
+    const upload_dir = '/../../uploads';
     console.log(fs.existsSync(upload_dir));
     if (!fs.existsSync(upload_dir)) {
       fs.mkdirSync(upload_dir);
     }
-
-    // request.head(uri, function (err, res, body) {
-    //   request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-    // });
   }
 
   async createOrder(req) {
