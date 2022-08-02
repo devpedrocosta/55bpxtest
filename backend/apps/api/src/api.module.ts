@@ -6,6 +6,9 @@ import * as Joi from 'joi';
 import { DatabaseModule, RmqModule } from '@app/common';
 import { ApiGateway } from './api.gateway';
 import { RQL_QUEE } from './dto/create-image.request';
+import { MongooseModule } from '@nestjs/mongoose';
+import { Order, OrderSchema } from './repository/schemas/order.schema';
+import { OrdersRepository } from './repository/repository';
 
 @Module({
   imports: [
@@ -20,8 +23,10 @@ import { RQL_QUEE } from './dto/create-image.request';
     RmqModule.register({
       name: RQL_QUEE,
     }),
+     DatabaseModule,
+     MongooseModule.forFeature([{ name: Order.name, schema: OrderSchema }]),
   ],
   controllers: [ApiController],
-  providers: [ApiService, ApiGateway],
+  providers: [ApiService, ApiGateway,OrdersRepository],
 })
 export class ApiModule {}

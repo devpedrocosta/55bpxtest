@@ -7,7 +7,7 @@ export class ApiController {
 
   @Get()
   public getAll() {
-    return this.apiService.getTodos();
+    return this.apiService.getAll();
   }
 
   @Post('process')

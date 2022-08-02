@@ -1,5 +1,5 @@
 FROM node:alpine As development
-
+RUN apk add --no-cache python3 g++ make
 WORKDIR /usr/src/app
 
 COPY package*.json ./

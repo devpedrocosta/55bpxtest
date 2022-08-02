@@ -6,17 +6,19 @@ import { ApiGateway } from './api.gateway';
 const cheerio = require('cheerio');
 import * as request from 'request';
 import { RQL_QUEE } from './dto/create-image.request';
+import { OrdersRepository } from './repository/repository';
 
 @Injectable()
 export class ApiService {
   private todos = [];
   constructor(
+     private readonly ordersRepository: OrdersRepository,
     private readonly todoGateway: ApiGateway,
     @Inject(RQL_QUEE) private billingClient: ClientProxy,
   ) {}
 
-  public getTodos() {
-    this.todoGateway.send('xxx');
+  public getAll() {
+    return this.ordersRepository.find({});
   }
 
   async createOrder(data) {
@@ -31,7 +33,6 @@ export class ApiService {
     this.billingClient.emit('image_processed', {
       item,
     });
-
     return of(this.todoGateway.send(item)).pipe(delay(2000));
   }
 
