@@ -13,7 +13,7 @@ existem  4 aplicacoes
  3 - bull processamento mensagem
  4 -  site aplicacao
 
-## Installation  cd site-image-process/
+## Installation  cd front/
 
 ```bash
 $ npm install
