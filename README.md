@@ -13,7 +13,7 @@ existem  4 aplicacoes
  3 - bull processamento mensagem
  4 -  site aplicacao
 
-## Installation  cd site-image-process/
+## Installation  cd front/
 
 ```bash
 $ npm install
@@ -42,7 +42,7 @@ frontend port : localhost:4200
 ```bash
 $ npx nx serve site-process 
 
-
+url usado para teste buscando as imagens: https://www.bridgeport.edu
 ```
 
 ## Mongo acess replica/
@@ -61,9 +61,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Pedro costa]((https://github.com/devpedrocosta))
+
 
 ## License
 
