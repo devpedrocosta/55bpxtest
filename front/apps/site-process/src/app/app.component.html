@@ -3,34 +3,27 @@
       src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" height="92" width="272">
 
     <div class=" ">
-      <input type="url" placeholder="" [(ngModel)]="site" style="width:20rem;  margin-left:2rem;" class="inputWrap ">
+      <input type="url" placeholder="url sem barra no final" [(ngModel)]="site" style="width:20rem;  margin-left:2rem;"
+        class="inputWrap ">
     </div>
-    <p class="mb20 button" (click)="processImage()" style="margin-top:1rem ; margin-left:2rem;">Buscar imagens</p>
+    <p class="mb20 button" (click)="processImage()" style="cursor:pointer; margin-top:1rem ; margin-left:2rem;">Buscar
+      imagens</p>
   </div>
 </div>
-<div class="">
-  <div class="wrapper">
 
-    <div class="content">
+<div id="kehl-grid">
+  <div class="margin">
+    <div *ngFor="let item of list" class="grid-box-1 branding">
+      <a href="{{item.site}}{{item.default_url}}">
+        <div class="image-mask-1"></div>
+        <img title="saturate" class="saturate" src="{{item.site}}{{item.default_url}}" alt="" />
 
-      <div class="product-grid product-grid--flexbox">
-        <div class="product-grid__wrapper">
+        <h5>Ver na imagem para ver a original</h5>
 
-
-
-          <div class="product-grid__product-wrapper" *ngFor="let item of list">
-            <div class="product-grid__product">
-              <div class="product-grid__img-wrapper">
-                <img src="{{item.site}}{{item.default_url}}" alt="Img" class="product-grid__img" />
-              </div>
-              <span style="margin-left:1rem ;" class="product-grid__title">Data processamento :{{item.process_date |
-                date: 'dd/MM/yyyy HH:mm'}} </span>
-
-            </div>
-          </div>
-
-
-        </div>
-      </div>
+        <p>Data processamento: {{item.process_date |
+          date: 'dd/MM/yyyy HH:mm'}}</p>
+      </a>
     </div>
+
   </div>
+</div>

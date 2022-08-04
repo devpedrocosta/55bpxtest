@@ -13,9 +13,7 @@ export class RabqServiceService {
 
 
   async createProcessJob(data: any) {
-
     await this.createOrder(data);
-    this.wsservice.send(JSON.stringify(data));
   }
 
   download(uri, filename, callback) {
@@ -38,7 +36,8 @@ export class RabqServiceService {
       }
       
       const order = await this.ordersRepository.create(
-        data, { session });
+        data);
+
       this.download(
         request.url,
         request.default_url,

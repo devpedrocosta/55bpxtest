@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.receiveData().subscribe((message: any) => {
+      console.log(message)
       if (message) {
         this.list = [message, ...this.list];
       }
@@ -29,6 +30,8 @@ export class AppComponent implements OnInit {
         }
       });
   }
+
+
 
   receiveData() {
     return this.socket.fromEvent('onAdd');

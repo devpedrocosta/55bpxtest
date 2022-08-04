@@ -1,10 +1,4 @@
-*  { 
-  margin: 0; padding: 0; 
-  color: #222;
-  box-sizing: border-box;
-  font-family: Arial,sans-serif;
-  font-size: 16px;
-}
+
 
 /* layout */
 html, body {
@@ -36,10 +30,7 @@ html, body {
   height: 100%;
   align-items: center;
 }
-
-/* .rowWrap {
-  margin: 0 auto;
-} */
+.saturate { filter: grayscale(100%);  }
 
 .form {
   width: 100%;
